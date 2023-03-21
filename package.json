@@ -1,0 +1,29 @@
+{
+  "name": "del-cli-test",
+  "version": "1.0.0",
+  "description": "testing a del-cli error when using glob with exclusion on windows",
+  "scripts": {
+    "generateFiles": "node -e \"require(\\\"fs\\\").writeFileSync(\\\"testDir/generatedFile.txt\\\", \\\"Generated File Text\\\n\\\");\"",
+    "deleteAllFiles": "del testDir/*",
+    "deleteFiles": "del testDir/* !testDir/testFile.txt",
+    "test": "npm run generateFiles && npm run deleteFiles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jharris4/del-cli-test.git"
+  },
+  "keywords": [
+    "del-cli",
+    "windows",
+    "test"
+  ],
+  "author": "jharris4",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jharris4/del-cli-test/issues"
+  },
+  "homepage": "https://github.com/jharris4/del-cli-test#readme",
+  "devDependencies": {
+    "del-cli": "^5.0.0"
+  }
+}
