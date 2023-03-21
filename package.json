@@ -4,7 +4,7 @@
   "description": "testing a del-cli error when using glob with exclusion on windows",
   "scripts": {
     "generateFiles": "node -e \"require(\\\"fs\\\").writeFileSync(require(\\\"path\\\").join(\\\"testDir\\\",\\\"generatedFile.txt\\\"), \\\"Generated File Text\\\");\"",
-    "deleteAllFiles": "del testDir/*",
+    "deleteAllFiles": "del-cli testDir/*",
     "deleteFiles": "del testDir/* !testDir/testFile.txt",
     "test": "npm run deleteAllFiles"
   },
