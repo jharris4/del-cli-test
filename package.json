@@ -5,8 +5,8 @@
   "scripts": {
     "generateFiles": "node -e \"require(\\\"fs\\\").writeFileSync(require(\\\"path\\\").join(\\\"testDir\\\",\\\"generatedFile.txt\\\"), \\\"Generated File Text\\\");\"",
     "deleteAllFiles": "del testDir/*",
-    "deleteFiles": "del \"testDir/*\" \"!testDir/testFile.txt\"",
-    "test": "npm run generateFiles && npm run deleteFiles"
+    "deleteFiles": "del testDir/* !testDir/testFile.txt",
+    "test": "npm run generateFiles && npm run deleteAllFiles"
   },
   "repository": {
     "type": "git",
